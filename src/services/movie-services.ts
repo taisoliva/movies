@@ -7,8 +7,8 @@ export async function createMovie(movie : Movie){
     return movieRepository.createMovie(movie)
 }
 
-export async function getMovies(){
-    return movieRepository.getMovie()
+export async function getMovies(plataforma ?: string){
+    return movieRepository.getMovie(plataforma)
 }
 
 export async function updateMovies(id :number ,movieUpdate : MovieUpdate){

@@ -20,7 +20,9 @@ export async function createMovie(req: Request, res : Response) {
 
 export async function getMovies(req: Request, res : Response) {
 
-    const result = await movieServices.getMovies()
+    const plataforma = req.query.plataforma as string
+
+    const result = await movieServices.getMovies(plataforma)
     res.status(httpStatus.OK).send(result)
 }
 

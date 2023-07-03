@@ -14,6 +14,9 @@ export type MovieUpdate = {
 
 export type MovieInput = Omit <Movie, "id">
 
+export type Total = {
+    total : number
+}
 
 export type Error = {
     type:string;
